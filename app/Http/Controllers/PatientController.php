@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Hospital;
 use App\Models\Patient;
 use Illuminate\Http\Request;
 
@@ -22,9 +23,9 @@ class PatientController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(Hospital $hospital)
     {
-        return view('patients.create');
+        return view('patients.create', compact('hospital'));
     }
 
     /**

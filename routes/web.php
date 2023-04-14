@@ -18,6 +18,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/login', function () {
+    return view('login');
+});
 
 Route::resource('hospitals', HospitalController::class);
 Route::resource('patients', PatientController::class);

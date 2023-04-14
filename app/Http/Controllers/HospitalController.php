@@ -69,8 +69,8 @@ class HospitalController extends Controller
         $request->validate([
             'name' => 'required',
             'address' => 'required',
+            'email' => 'required',
             'phone' => 'required',
-            'hospital_id' => 'required',
         ]);
 
         $hospital->update($request->all());

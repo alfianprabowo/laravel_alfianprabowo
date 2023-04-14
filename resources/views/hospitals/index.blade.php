@@ -33,12 +33,12 @@
             <td>{{ $hospital->address }}</td>
             <td>{{ $hospital->email }}</td>
             <td>{{ $hospital->phone }}</td>
-            <td>
+            <td >
                 <form action="{{ route('hospitals.destroy',$hospital->id) }}" method="POST">
    
-                    <a class="btn btn-info" href="{{ route('hospitals.show',$hospital->id) }}">View</a>
+                    <a class="btn btn-info mb-1" href="{{ route('hospitals.show',$hospital->id) }}">View</a>
     
-                    <a class="btn btn-primary" href="{{ route('hospitals.edit',$hospital->id) }}">Edit</a>
+                    <a class="btn btn-outline-info mb-1" href="{{ route('hospitals.edit',$hospital->id) }}">Edit</a>
    
                     @csrf
                     @method('DELETE')
@@ -49,8 +49,8 @@
         </tr>
         @endforeach
     </table>
-    <div class="row text-center">
-        {{-- {!! $hospitals->links() !!} --}}
-    </div>
+    {{-- <div class="row text-center">
+        {!! $hospitals->links() !!}
+    </div> --}}
       
 @endsection

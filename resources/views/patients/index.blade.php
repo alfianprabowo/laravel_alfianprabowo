@@ -7,7 +7,7 @@
                 <h2>Daftar Pasien</h2>
             </div>
             <div class="float-end">
-                <a class="btn btn-success" href="{{ route('patients.create') }}"> Tambah Rumah Sakit</a>
+                <a class="btn btn-success" href="{{ route('patients.create') }}"> Tambah Pasien</a>
             </div>
         </div>
     </div>
@@ -33,9 +33,9 @@
             <td>
                 <form action="{{ route('patients.destroy',$patient->id) }}" method="POST">
    
-                    <a class="btn btn-info" href="{{ route('patients.show',$patient->id) }}">View</a>
+                    <a class="btn btn-info mb-1" href="{{ route('patients.show',$patient->id) }}">View</a>
     
-                    <a class="btn btn-primary" href="{{ route('patients.edit',$patient->id) }}">Edit</a>
+                    <a class="btn btn-outline-info mb-1" href="{{ route('patients.edit',$patient->id) }}">Edit</a>
    
                     @csrf
                     @method('DELETE')
@@ -46,8 +46,8 @@
         </tr>
         @endforeach
     </table>
-    <div class="row text-center">
-        {{-- {!! $patients->links() !!} --}}
-    </div>
+    {{-- <div class="row text-center">
+        {!! $patients->links() !!}
+    </div> --}}
       
 @endsection

@@ -15,20 +15,26 @@
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Nama:</strong>
+                <strong>Nama :</strong>
                 {{ $patient->name }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Alamat:</strong>
+                <strong>Alamat :</strong>
                 {{ $patient->address }}
             </div>
         </div> 
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Telepon:</strong>
+                <strong>Telepon :</strong>
                 {{ $patient->phone }}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Rumah Sakit :</strong>
+                {{ $patient->hospital->name }}
             </div>
         </div>
         

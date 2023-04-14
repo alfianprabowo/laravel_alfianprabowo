@@ -8,11 +8,11 @@
 </head>
 <body>
     <div class="container">
-        <div class="row justify-content-center mt-5">
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header">{{ __('Login') }}</div>
-                </div>
-            </div>
+        <div class="form">
+            <form action="" method="post" name="login">
+                <input type="text" name="username" placeholder="Username" required />
+                <input type="password" name="password" placeholder="Password" required />
+                <input name="submit" type="submit" value="Login" />
+            </form>
         </div>
     </div>
